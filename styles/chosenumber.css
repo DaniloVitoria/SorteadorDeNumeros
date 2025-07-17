@@ -1,0 +1,27 @@
+ input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.chose__number{
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+    color: white;
+
+}
+
+.card__number1, .card__number2, .card__number3{
+    & h3 {
+        justify-self: center;
+    }
+
+    input[type="number"]{
+        background-color: ;
+    }
+}

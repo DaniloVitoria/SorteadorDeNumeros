@@ -1,0 +1,92 @@
+*, *::before, *::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+:root {
+
+
+    /*Conent*/
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inverse:#030203;
+
+
+    /*Background*/
+    --background-primary:#020202;
+    --background-secondary:#111012;
+    --background-tertiary:#24222E;
+    --background-brand:#C58DE7;
+    --background-gray: #3D3D3D;
+    
+
+
+    /*Accent*/
+    --accent-pink:#D586E0;
+    --accent-blue:#91A1FA;
+    --accent-green:#77C0AF;
+    --accent-lime:#D1DC97;
+    --accent-red:#E9A9B3;
+
+
+    /*Gradient*/
+    --gradient-border:#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%;
+    --gradient-background:#D586E0 0%, #91A1FA 98.93%;
+    --gradient-content:#C7C9CC 0%, #3D3D3D 100%;
+
+
+
+    /*line heigh*/
+    --l-bg: 1.5rem;
+    
+    --l-sm: 1.3rem;
+
+    /*Robot flex line height*/
+    --lrf-sm:1.5rem;
+    --lrf-md:1.5rem;
+
+    /*Sora*/
+    --display-lg: 4.5rem;
+    --display-md: 2.5rem;
+    --display-small: 2rem;
+
+
+
+    /*Roboto Mono*/
+    --overline: 16px;
+
+
+    /*Roboto Flex*/
+    --p-lg: 1rem;
+    --p-medium: 0.875rem;
+    --p-small: 0.75rem;
+
+    --label-lg: 1.25rem;
+    --label-md: 1.25rem;
+    --label-sm: 1rem;
+
+}
+
+
+
+
+html, body {
+
+    
+
+}
+
+body{
+    background-color: var(--background-primary);
+}
+
+.container__father{
+
+    padding: 12.6em 8.37em 9.56em;
+}

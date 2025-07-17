@@ -1,0 +1,108 @@
+.container__two__parts {
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+
+    & header > h3{
+        
+  background: -webkit-linear-gradient(left, var(--content-secondary), var(--background-gray));
+  background: linear-gradient(to right, var(--content-secondary), var(--background-gray));    
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+
+    font-family: "Sora", sans-serif;
+    font: 31.25rem 1.5rem/1.5rem;
+
+    }
+
+    & header {
+        margin-top: 5.56em;
+    }
+}
+
+
+
+
+.main__text{
+
+    margin-top: 0.75em;
+h1{
+
+    font-family: "Sora", sans-serif;
+    color: var(--content-primary);
+    font-size: var(--display-lg);
+   
+}
+    
+    margin: 0,75 0;
+}
+
+.card__explain{
+    margin-top: 2.375em;
+}
+
+.card__explain2{
+    margin-top: 2.25em;
+}
+
+.card__explain, .card__explain2{
+
+    gap: .5em;
+    
+
+    & img {
+        
+        align-self: baseline;
+    }
+
+    & div {
+        
+
+        & h3{
+            font-size: var(--p-medium);
+            line-height: var(--lrf-md);
+            color: var(--content-brand);
+            font-family: "Robot Flex", sans-serif;
+        }
+
+        & p {
+            font-size: var(--p-small);
+            line-height: var(--lrf-sm);
+            color: var(--content-secondary);
+            font-family: "Robot Flex", sans-serif;
+        }
+    }
+}
+
+
+
+
+
+
+.part__two{
+
+
+    & header{
+        color: rgb(255, 255, 255);
+
+        & h2{
+            font-size: var(--label-lg);
+            font-weight: bold;
+            font-family: "Robot flex", sans-serif;
+            color: var(--content-primary);
+            line-height: var(--lrf-md);
+        }
+
+        & p {
+            margin-top: 0.125em;
+            color: var(--content-secondary);
+            font-size: var(--p-lg);
+            font-weight: bold;
+            font-family: "Robot flex", sans-serif;
+            line-height: var(--lrf-md);
+
+        }
+    }
+}
