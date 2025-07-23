@@ -75,15 +75,17 @@
 
 
 
-
-html, body {
-
-    
-
+html{
+    height: 100vh;
 }
 
-body{
-    background-color: var(--background-primary);
+html {
+  background:
+    linear-gradient(black, rgba(0, 0, 0, 0.932)),
+    url('../assets/images/backgroundpage.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .container__father{

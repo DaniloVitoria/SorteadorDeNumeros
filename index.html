@@ -69,6 +69,7 @@
 
 
             <div class="part__two">
+
                 <header>
 
                     <h2>QUERO SORTEAR</h2>
@@ -77,29 +78,39 @@
 
                 </header>
 
-
+<form >
                 <div class="chose__number grid">
 
                     <div class="card__number1 grid">
                         <h3>NÚMEROS</h3>
-                        <input type="number">
+                        <input type="number" id="card1">
 
                     </div>
 
-                    <div class="card__number2">
+                    <div class="card__number2 grid">
                         <h3>DE</h3>
-                        <input type="number">
+                        <input type="number" id="card2">
 
                     </div>
 
-                    <div class="card__number3">
+                    <div class="card__number3 grid">
                         <h3>DE</h3>
-                        <input type="number">
+                        <input type="number" id="card3">
 
                     </div>
                 </div>
 
-            </div>
+                <label class="toggle">
+  <input type="checkbox" id="repeatToggle"/>
+  <span class="slider"></span>
+  <span class="label-text">Não repetir número</span>
+</label>
+
+<div class="container__button__select grid">
+<button class="sortear flex" id="buttonfinal">Sortear <span><img src="./assets/icons/arrowright.svg" alt=""></span></button>
+</div>
+</form>
+</div>
 
         </div>
 
@@ -108,6 +119,6 @@
 
 
 
-
+<script src="index.js"></script>
 </body>
 </html>
