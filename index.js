@@ -107,7 +107,7 @@ let transformNumber = String(generatedNumbers[i])
 
      
  console.log(i)
-    }, i * 1000)
+    }, i * 2700)
 
 
 

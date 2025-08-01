@@ -26,8 +26,23 @@ font-family: "Roboto Flex", sans-serif;
 
 .square__content {
   transform: rotate(-180deg);
-   animation:  stopRotation  1.2s ease-in-out ;
+   animation:  stopRotation  2s ease-in-out, changeColorCharacter 4s ease-in forwards ;
    
+    font-family: "Roboto mono", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    
+  
+}
+
+@keyframes changeColorCharacter {
+    0%{
+color: black;
+    }
+
+    100%{
+color: var(--content-brand);
+    }
 }
 
 
@@ -43,24 +58,20 @@ font-family: "Roboto Flex", sans-serif;
 
 
 .square__show {
-    
-    display: grid;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 
+  width: 5em;
+  height: 5em;
+  background-color: var(--content-brand);
+  color: white;
+  border-radius: 1.75em;
 
-    width: 5em;
-    height: 5em;
-    background-color: var(--content-brand);
-
-    color: white;
-
-    border-radius: 1.75em;
-
-
-    animation: rotate  1.2s ease-in-out forwards;
-    
+  animation: rotate 2s ease-in-out forwards, hideBackground 1s ease-in-out forwards;
+  animation-delay: 0s, 2s; /* inicia rotação imediatamente, e fundo 1s depois */
 }
+
 
 
 .square__desappear{
@@ -81,22 +92,26 @@ font-family: "Roboto Flex", sans-serif;
 
 
 @keyframes rotate {
+  0% {
+    opacity: 0;
+    scale: 0.7;
+    transform: rotate(0deg);
+  }
 
-    0%{
-        opacity: 0;
-        scale: 0.7;
-        transform: rotate(0deg);
-    }
-
-
-
-
-    100%{
-        opacity: 1;
-        scale: 1;
-        transform: rotate(180deg);
-        background-color: transparent;
-       
-    }
-
+  100% {
+    opacity: 1;
+    scale: 1;
+    transform: rotate(180deg);
+  }
 }
+
+@keyframes hideBackground {
+  0% {
+    background-color: var(--content-brand);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
