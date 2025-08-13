@@ -26,7 +26,7 @@ font-family: "Roboto Flex", sans-serif;
 
 .square__content {
   transform: rotate(-180deg);
-   animation:  stopRotation  2s ease-in-out, changeColorCharacter 4s ease-in forwards ;
+   animation:  stopRotation  2s ease-in-out forwards, changeColorCharacter 4s ease-in forwards ;
    
     font-family: "Roboto mono", sans-serif;
     font-weight: bold;
@@ -68,8 +68,11 @@ color: var(--content-brand);
   color: white;
   border-radius: 1.75em;
 
-  animation: rotate 2s ease-in-out forwards, hideBackground 1s ease-in-out forwards;
-  animation-delay: 0s, 2s; /* inicia rotação imediatamente, e fundo 1s depois */
+  animation: centerToLeft 5s ease-in-out,rotate 2s ease-in-out forwards, hideBackground 1s ease-in-out forwards;
+  animation-delay: 0s, 0s, 2s; /* inicia rotação imediatamente, e fundo 1s depois */
+   
+   
+   
 }
 
 
@@ -82,12 +85,17 @@ color: var(--content-brand);
 
 
 
-
+.sobrepor{
+  position: absolute;
+}
 
 
 
 .container__results_squares{
     display: flex;
+    
+    position: relative;
+    
 }
 
 
@@ -115,3 +123,42 @@ color: var(--content-brand);
   }
 }
 
+@keyframes centerToLeft {
+  0%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+
+
+
+
+
+
+
+
+.sortearAgain{
+
+  display: flex ;
+  color: var(--content-primary);
+  gap: 1em;
+  background-color: var(--background-tertiary);
+  padding: 1em;
+  border-radius: 8px;
+  border: none;
+  justify-content: center;
+  min-width: 20vw;
+
+  margin: auto;
+font-family: "Roboto mono", sans-serif;
+    font-weight: bold;
+    
+  margin-top: 2.5em;
+  & :hover{
+    cursor: pointer;
+  }
+}

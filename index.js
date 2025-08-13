@@ -84,14 +84,18 @@ form.addEventListener("submit", (event) =>{
     /*Laço de repetição para exibir todos os numero sorteados */
  let container__results_squares = document.createElement("div")
 
+ 
 
   for(let i = 0; i < generatedNumbers.length; i++){
 
-
+if(i > 5){
+  break
+ }
     setTimeout(() => {
 let transformNumber = String(generatedNumbers[i])
  /*Quadrados com o resultado do sorteio */
     let square__shape = document.createElement("div")
+    square__shape.classList.add("sobrepor")
     square__shape.classList.add("square__show")
 
 
@@ -102,31 +106,73 @@ let transformNumber = String(generatedNumbers[i])
 
     square__shape.appendChild(content__square)
      container__results_squares.appendChild(square__shape)
+      
 
-
-
+      setTimeout(() => {
+        square__shape.classList.remove("sobrepor")
+      }, i * 100)
      
  console.log(i)
     }, i * 2700)
 
 
-
+    
   }
 
 
 
  
+//criando o botão para sortear novamente
+//div pai
+let sortearAgain = document.createElement("button")
+
+//conteudo
+let contentAgain = document.createElement("span")
+
+//adicionando a imagem
+let imageAgain = document.createElement("img")
+
+//aidiconando conteudo
+contentAgain.innerHTML = "Sortear novamente"
+
+//adicionando imagem
+imageAgain.src = "assets/icons/replay.svg"
 
 
+sortearAgain.appendChild(contentAgain)
+sortearAgain.appendChild(imageAgain)
 
-
-
+sortearAgain.classList.add("sortearAgain")
 
  
   container__results_squares.classList.add("container__results_squares")
   part__two.appendChild(container__results_squares)
+ part__two.appendChild(sortearAgain)
     
 
 
+ //adicionando a function no click do sortearAgain
+ let change = false;
+ sortearAgain.addEventListener("click", (event)=> {
+  event.preventDefault()
+
+ change = !change
+  if(change){
+  sortearAgain.style.display = "none"
+  container__results_squares.style.display = "none"
+header.style.display = "none"
+
+
+hidden__UI.style.display = "block"
+  }else{
+      sortearAgain.style.display = "block"
+  container__results_squares.style.display = "block"
+  }
+
+  
+ })
     
 })
+
+
+
